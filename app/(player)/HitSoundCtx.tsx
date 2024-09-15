@@ -77,7 +77,7 @@ export const HitSoundProvider = ({
   const [playingState, setPlayingState] = useState(false);
   const canPlay = useMemo(() => {
     return playingState && howl?.state() === "loaded";
-  }, [playingState, howl?.state()]);
+  }, [playingState, howl]);
 
   const [currentSounds, setCurrentSounds] = useState<{
     [soundValue: string]: { sound: string; time: number };

@@ -4,10 +4,9 @@ import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { Montserrat, Roboto_Mono } from "next/font/google";
 
 import { theme } from "../theme";
-import { AnimatedBackgrounds } from "./AnimatedBackgrounds";
 
-export const montserrat = Montserrat({ subsets: ["latin-ext", "latin"] });
-export const roboto_mono = Roboto_Mono({
+const montserrat = Montserrat({ subsets: ["latin-ext", "latin"] });
+const roboto_mono = Roboto_Mono({
   subsets: ["latin-ext", "latin"],
 });
 

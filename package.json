@@ -5,16 +5,21 @@
   "scripts": {
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev": "next dev"
   },
   "dependencies": {
     "@mantine/core": "7.12.2",
     "@mantine/hooks": "7.12.2",
+    "animated-backgrounds": "^1.0.11",
+    "howler": "^2.2.4",
     "next": "14.2.4",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "rehowl": "^1.0.1"
   },
   "devDependencies": {
+    "@types/howler": "^2.2.11",
     "@types/node": "20.14.8",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",

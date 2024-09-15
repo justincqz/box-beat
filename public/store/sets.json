@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Never alone in space - Light Spar",
+    "music": "/store/music/00001.json",
+    "tracks": [
+      {
+        "combo": {
+          "src": "/store/combo/simple.json",
+          "workout": 1
+        },
+        "start": 12.9,
+        "reps": 4
+      }
+    ]
+  }
+]

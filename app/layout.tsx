@@ -1,16 +1,24 @@
 import "@mantine/core/styles.css";
 import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { Montserrat, Roboto_Mono } from "next/font/google";
+
 import { theme } from "../theme";
+import { AnimatedBackgrounds } from "./AnimatedBackgrounds";
+
+export const montserrat = Montserrat({ subsets: ["latin-ext", "latin"] });
+export const roboto_mono = Roboto_Mono({
+  subsets: ["latin-ext", "latin"],
+});
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "Box Beat",
+  description: "Box Beat - Box with the beat!",
 };
 
 export default function RootLayout({ children }: { children: any }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ height: "100%" }}>
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
@@ -19,8 +27,17 @@ export default function RootLayout({ children }: { children: any }) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+      <body style={{ height: "100%" }}>
+        <MantineProvider
+          theme={{
+            ...theme,
+            fontFamily: montserrat.style.fontFamily,
+            fontFamilyMonospace: roboto_mono.style.fontFamily,
+          }}
+        >
+          {/* <AnimatedBackgrounds /> */}
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );

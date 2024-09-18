@@ -7,7 +7,7 @@ import { formatTime } from "utils/formatTime";
 import { useTempStore } from "app/(player)/_hooks/useTempStore";
 import StartWorkoutButton from "./StartWorkoutButton";
 
-export const SetlistPage = ({ params }: { params: { setlist_id: string } }) => {
+export default function Page({ params }: { params: { setlist_id: string } }) {
   const setlistData = useTempStore();
   const setlists = [{ id: 1, data: setlistData }];
 
@@ -80,6 +80,4 @@ export const SetlistPage = ({ params }: { params: { setlist_id: string } }) => {
       </Stack>
     </Stack>
   );
-};
-
-export default SetlistPage;
+}

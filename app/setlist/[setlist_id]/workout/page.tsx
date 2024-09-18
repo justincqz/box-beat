@@ -1,11 +1,7 @@
 import { useTempStore } from "app/(player)/_hooks/useTempStore";
 import { redirect } from "next/navigation";
 
-export default function WorkoutPage({
-  params,
-}: {
-  params: { setlist_id: string };
-}) {
+export default function Page({ params }: { params: { setlist_id: string } }) {
   const setlistData = useTempStore();
   const setlists = [{ id: 1, data: setlistData }];
   const setlist = setlists.find((set) => set.id === Number(params.setlist_id));

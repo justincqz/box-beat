@@ -109,11 +109,11 @@ const SetlistModal = ({
   );
 };
 
-export const WorkoutPage = ({
+export default function Page({
   params,
 }: {
   params: { setlist_id: string; workout_id: string };
-}) => {
+}) {
   const setlistData = useTempStore();
   const setlists = [{ id: 1, data: setlistData }];
   const setlist = setlists.find(
@@ -157,6 +157,4 @@ export const WorkoutPage = ({
       {firstInteraction && <WorkoutMain workout={workout} />}
     </Stack>
   );
-};
-
-export default WorkoutPage;
+}

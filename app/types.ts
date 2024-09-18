@@ -9,7 +9,7 @@ export type SongSource = {
 export type SetSource = {
   name: string;
   music: SongSource | string;
-  tracks: {
+  combos: {
     combo: {
       src: string;
       workout: number;
@@ -22,12 +22,12 @@ export type SetSource = {
 export type ComboData = {
   name: string;
   beats: number;
-  combo: string;
+  moves: string;
 };
 
-export type SetData = Omit<SetSource, "music" | "tracks"> & {
+export type SetData = Omit<SetSource, "music" | "combos"> & {
   music: SongSource;
-  tracks: {
+  combos: {
     combo: ComboData;
     start: number;
     reps: number;

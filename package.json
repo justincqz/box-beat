@@ -11,6 +11,8 @@
   "dependencies": {
     "@mantine/core": "7.12.2",
     "@mantine/hooks": "7.12.2",
+    "@tabler/icons-react": "^3.17.0",
+    "@tanstack/react-query": "^5.56.2",
     "animated-backgrounds": "^1.0.11",
     "howler": "^2.2.4",
     "next": "14.2.4",

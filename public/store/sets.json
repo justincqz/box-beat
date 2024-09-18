@@ -2,7 +2,7 @@
   {
     "name": "Never alone in space - Light Spar",
     "music": "/store/music/00001.json",
-    "tracks": [
+    "combos": [
       {
         "combo": {
           "src": "/store/combo/simple.json",

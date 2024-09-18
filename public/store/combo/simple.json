@@ -2,11 +2,11 @@
   {
     "name": "Simple Jab Cross",
     "beats": 4,
-    "combo": "j-jc"
+    "moves": "j-jc"
   },
   {
     "name": "Simple Jab Cross Quick",
     "beats": 4,
-    "combo": "j---jc--"
+    "moves": "j---jc--"
   }
 ]

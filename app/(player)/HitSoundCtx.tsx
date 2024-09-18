@@ -49,8 +49,12 @@ const SoundPlayer = ({
       key={time}
       onEnd={() => {
         setCurrentSounds((sounds) => {
-          delete sounds[soundValue];
-          return sounds;
+          return Object.keys(sounds).reduce((acc, key) => {
+            if (key === soundValue) {
+              return acc;
+            }
+            return { ...acc, [key]: sounds[key] };
+          }, {});
         });
       }}
       loop={false}
@@ -68,7 +72,7 @@ export const HitSoundProvider = ({
     sprite: {
       jab: [80, 320],
       cross: [340, 550 - 340],
-      hook: [1080, 1400 - 1080],
+      hook: [1100, 1400 - 1090],
       body: [825, 1082 - 825],
     },
     defaultVolume: 0.5,

@@ -4,6 +4,7 @@ import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { Montserrat, Roboto_Mono } from "next/font/google";
 
 import { theme } from "../theme";
+import { QueryProvider } from "./QueryProvider";
 
 const montserrat = Montserrat({ subsets: ["latin-ext", "latin"] });
 const roboto_mono = Roboto_Mono({
@@ -27,16 +28,18 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body style={{ height: "100%" }}>
-        <MantineProvider
-          theme={{
-            ...theme,
-            fontFamily: montserrat.style.fontFamily,
-            fontFamilyMonospace: roboto_mono.style.fontFamily,
-          }}
-        >
-          {/* <AnimatedBackgrounds /> */}
-          {children}
-        </MantineProvider>
+        <QueryProvider>
+          <MantineProvider
+            theme={{
+              ...theme,
+              fontFamily: montserrat.style.fontFamily,
+              fontFamilyMonospace: roboto_mono.style.fontFamily,
+            }}
+          >
+            {/* <AnimatedBackgrounds /> */}
+            {children}
+          </MantineProvider>
+        </QueryProvider>
       </body>
     </html>
   );

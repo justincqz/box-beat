@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { useTempStore } from "app/(player)/_hooks/useTempStore";
 import { redirect } from "next/navigation";
 

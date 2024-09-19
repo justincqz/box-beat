@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import "@mantine/core/styles/UnstyledButton.css";
 import "@mantine/core/styles/Button.css";
 

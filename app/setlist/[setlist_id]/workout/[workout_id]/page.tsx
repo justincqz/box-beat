@@ -1,5 +1,7 @@
 "use client";
 
+export const runtime = "edge";
+
 import { Button, Group, Modal, Stack, Text } from "@mantine/core";
 import { useTempStore } from "app/(player)/_hooks/useTempStore";
 import { redirect } from "next/navigation";
